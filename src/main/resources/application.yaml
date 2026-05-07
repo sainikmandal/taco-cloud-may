@@ -3,3 +3,6 @@ spring:
     name: taco-cloud-may
   thymeleaf:
     cache: false
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
