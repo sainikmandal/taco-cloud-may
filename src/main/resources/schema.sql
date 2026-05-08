@@ -26,7 +26,7 @@ create table if not exists Taco_Order (
     delivery_name     varchar(100) not null,
     delivery_street   varchar(255) not null,
     delivery_city     varchar(100) not null,
-    delivery_state    varchar(2)   not null,
+    delivery_state    varchar(100) not null,
     delivery_zip      varchar(10)  not null,
     cc_number         varchar(16)  not null,
     cc_expiration     varchar(5)   not null,
