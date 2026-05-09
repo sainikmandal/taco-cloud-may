@@ -4,6 +4,8 @@ import com.sainik.tacocloudmay.models.TacoOrder;
 import com.sainik.tacocloudmay.repository.TacoOrderRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.Date;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +36,7 @@ public class OrderController {
         if (errors.hasErrors()) {
             return "orderForm";
         }
+        order.setPlacedAt(new Date());
         tacoOrderRepository.save(order);
         sessionStatus.setComplete();
         return "redirect:/";
